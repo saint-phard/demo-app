@@ -1,0 +1,6 @@
+version: '3'
+services:
+  my-app:
+    image: phard/the-app:demo
+    ports:
+     - 8888:8888
