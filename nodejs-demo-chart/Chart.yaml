@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nodejs-demo-chart
+description: A Helm chart for nodejs-demo-app
+type: application
+version: 0.1.0
+appVersion: "1.16.0"
+
+
+# In the values.yaml file, include the information to login to your private docker repository under the "imageCredentials" field

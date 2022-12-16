@@ -1,0 +1,36 @@
+# Default values for nodejs-demo-chart.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+name: nodejs-demo-app
+labels:
+  app: nodejs-demo-app
+
+image:
+  repository: phard/the-app
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: demo
+imagePullSecrets: loginsecret
+imageCredentials:
+  registry: https://index.docker.io/v1/ #this URL is for dockerhub
+  username: ###
+  password: ###
+  email: ###
+
+nameOverride: nodejs-demo-app
+fullnameOverride: nodejs-demo-app
+
+service:
+  type: LoadBalancer
+  port: 8888
+  nodePort: 30050
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80

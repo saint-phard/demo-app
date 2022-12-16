@@ -1,8 +1,8 @@
 # Node.js Application Demo
 
-The application was cloned from https://github.com/hashicorp/demo-app-nodejs
-
 This repository contains a sample Node.js application used for containerization purposes.
+
+The basic nodejs application was cloned from https://github.com/hashicorp/demo-app-nodejs
 
 I built the code and packaged in a docker image, pushed it to my private docker repository.
 
